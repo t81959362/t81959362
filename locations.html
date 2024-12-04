@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover dog-friendly locations across the UK. Find parks, beaches, cafes, and more places to enjoy with your furry friend.">
+    <title>Dog-Friendly Locations | Barker's Canine Corner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="js/image-loader.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.svg" alt="Barker's Canine Corner - Two dogs sitting on a couch against a countryside backdrop">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="guides.html">Guides</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="breeds.html">Breeds</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="locations.html" class="active">UK Locations</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="locations-page">
+        <section class="page-hero">
+            <div class="hero-content">
+                <h1>Dog-Friendly UK Locations</h1>
+                <p>Discover perfect spots for adventures with your furry friend</p>
+            </div>
+        </section>
+
+        <section class="location-search">
+            <div class="search-container">
+                <input type="text" id="location-search" placeholder="Enter city or postcode...">
+                <select id="location-type">
+                    <option value="all">All Locations</option>
+                    <option value="parks">Parks</option>
+                    <option value="beaches">Beaches</option>
+                    <option value="cafes">Cafes & Restaurants</option>
+                    <option value="pubs">Pubs</option>
+                    <option value="hotels">Hotels</option>
+                </select>
+                <button class="search-btn">Find Locations</button>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div id="locations-map"></div>
+        </section>
+
+        <section class="featured-locations">
+            <h2>Top Dog-Friendly Spots</h2>
+            <div class="location-grid">
+                <article class="location-card">
+                    <img data-image-type="lifestyle" alt="Dog-friendly park in London">
+                    <div class="location-info">
+                        <h3>Hyde Park, London</h3>
+                        <p>Spacious park with dedicated dog areas</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half"></i>
+                        </div>
+                    </div>
+                </article>
+                <article class="location-card">
+                    <img data-image-type="lifestyle" alt="Dog-friendly beach in Cornwall">
+                    <div class="location-info">
+                        <h3>Fistral Beach, Cornwall</h3>
+                        <p>Beautiful beach perfect for dog walks</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </article>
+                <article class="location-card">
+                    <img data-image-type="lifestyle" alt="Dog-friendly cafe in Brighton">
+                    <div class="location-info">
+                        <h3>Paws & Coffee, Brighton</h3>
+                        <p>Cozy cafe welcoming dogs and owners</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="location-categories">
+            <div class="category-grid">
+                <article class="category-card">
+                    <img data-image-type="lifestyle" alt="Dog parks category">
+                    <h3>Parks & Gardens</h3>
+                    <p>Find the best dog parks near you</p>
+                </article>
+                <article class="category-card">
+                    <img data-image-type="lifestyle" alt="Dog beaches category">
+                    <h3>Beaches</h3>
+                    <p>Dog-friendly beaches across the UK</p>
+                </article>
+                <article class="category-card">
+                    <img data-image-type="lifestyle" alt="Dog cafes category">
+                    <h3>Cafes & Pubs</h3>
+                    <p>Places to dine with your dog</p>
+                </article>
+                <article class="category-card">
+                    <img data-image-type="lifestyle" alt="Dog hotels category">
+                    <h3>Hotels & B&Bs</h3>
+                    <p>Pet-friendly accommodation</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="seasonal-recommendations">
+            <h2>Seasonal Recommendations</h2>
+            <div class="season-tabs">
+                <button class="season-tab active" data-season="spring">Spring</button>
+                <button class="season-tab" data-season="summer">Summer</button>
+                <button class="season-tab" data-season="autumn">Autumn</button>
+                <button class="season-tab" data-season="winter">Winter</button>
+            </div>
+            <div class="season-content">
+                <!-- Content will be dynamically loaded based on season -->
+            </div>
+        </section>
+
+        <section class="community-reviews">
+            <h2>Community Reviews</h2>
+            <div class="review-form">
+                <h3>Share Your Experience</h3>
+                <form id="review-form">
+                    <select name="location" required>
+                        <option value="">Select Location</option>
+                        <!-- Options populated dynamically -->
+                    </select>
+                    <textarea name="review" placeholder="Write your review..." required></textarea>
+                    <div class="rating-input">
+                        <span>Rating:</span>
+                        <div class="star-rating">
+                            <i class="far fa-star" data-rating="1"></i>
+                            <i class="far fa-star" data-rating="2"></i>
+                            <i class="far fa-star" data-rating="3"></i>
+                            <i class="far fa-star" data-rating="4"></i>
+                            <i class="far fa-star" data-rating="5"></i>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-review-btn">Submit Review</button>
+                </form>
+            </div>
+            <div class="recent-reviews">
+                <!-- Reviews loaded dynamically -->
+            </div>
+        </section>
+
+        <section class="location-tips">
+            <h2>Essential Tips</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Check Opening Times</h3>
+                    <p>Many locations have seasonal opening hours and dog restrictions.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-poop"></i>
+                    <h3>Clean Up</h3>
+                    <p>Always carry waste bags and use designated bins.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-water"></i>
+                    <h3>Water & Treats</h3>
+                    <p>Pack water and snacks for your furry friend.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Call Ahead</h3>
+                    <p>Confirm dog-friendly policies before visiting.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Barker's Canine Corner is your trusted source for all things dogs in the UK.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Use</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Barker's Canine Corner. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+    <script src="locations.js"></script>
+</body>
+</html>

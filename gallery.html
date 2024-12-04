@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse our collection of beautiful dog photos. Share and discover amazing pictures of dogs from our community.">
+    <title>Dog Photo Gallery | Barker's Canine Corner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="js/image-loader.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            imageLoader.loadPageImages();
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.svg" alt="Barker's Canine Corner - Two dogs sitting on a couch against a countryside backdrop">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="guides.html">Guides</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="breeds.html">Breeds</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="locations.html">UK Locations</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="gallery-page">
+        <section class="page-hero">
+            <div class="hero-content">
+                <h1>Dog Photo Gallery</h1>
+                <p>Share and discover beautiful moments with our furry friends</p>
+            </div>
+        </section>
+
+        <section class="gallery-controls">
+            <div class="filter-container">
+                <select id="category-filter">
+                    <option value="all">All Categories</option>
+                    <option value="portraits">Portraits</option>
+                    <option value="action">Action Shots</option>
+                    <option value="funny">Funny Moments</option>
+                    <option value="sleeping">Sleeping Beauties</option>
+                    <option value="puppies">Puppies</option>
+                </select>
+                <select id="breed-filter">
+                    <option value="all">All Breeds</option>
+                    <!-- Populated by JavaScript -->
+                </select>
+                <div class="sort-options">
+                    <button class="sort-btn active" data-sort="newest">Newest</button>
+                    <button class="sort-btn" data-sort="popular">Most Popular</button>
+                    <button class="sort-btn" data-sort="random">Random</button>
+                </div>
+            </div>
+            <button class="upload-btn" id="upload-photo">
+                <i class="fas fa-upload"></i> Upload Photo
+            </button>
+        </section>
+
+        <section class="featured-gallery">
+            <h2>Featured Photos</h2>
+            <div class="gallery-grid">
+                <article class="gallery-item">
+                    <img data-image-type="lifestyle" alt="Happy dog playing in park">
+                    <div class="overlay">
+                        <h3>Playtime Fun</h3>
+                        <p>By: Sarah Johnson</p>
+                    </div>
+                </article>
+                <article class="gallery-item">
+                    <img data-image-type="breed" data-breed="golden retriever" alt="Golden retriever puppy">
+                    <div class="overlay">
+                        <h3>Puppy Love</h3>
+                        <p>By: Mike Williams</p>
+                    </div>
+                </article>
+                <article class="gallery-item">
+                    <img data-image-type="lifestyle" alt="Dog at the beach">
+                    <div class="overlay">
+                        <h3>Beach Day</h3>
+                        <p>By: Emma Thompson</p>
+                    </div>
+                </article>
+                <article class="gallery-item">
+                    <img data-image-type="breed" data-breed="border collie" alt="Border collie agility">
+                    <div class="overlay">
+                        <h3>Agility Champion</h3>
+                        <p>By: David Brown</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="gallery-categories">
+            <h2>Photo Categories</h2>
+            <div class="category-grid">
+                <article class="category-card">
+                    <img data-image-type="lifestyle" alt="Puppies category">
+                    <h3>Puppies</h3>
+                    <p>Adorable puppy moments</p>
+                </article>
+                <article class="category-card">
+                    <img data-image-type="lifestyle" alt="Action shots category">
+                    <h3>Action Shots</h3>
+                    <p>Dogs in motion</p>
+                </article>
+                <article class="category-card">
+                    <img data-image-type="lifestyle" alt="Family moments category">
+                    <h3>Family Moments</h3>
+                    <p>Dogs with their families</p>
+                </article>
+                <article class="category-card">
+                    <img data-image-type="lifestyle" alt="Funny moments category">
+                    <h3>Funny Moments</h3>
+                    <p>Dogs being dogs</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="monthly-challenge">
+            <h2>Monthly Photo Challenge</h2>
+            <div class="challenge-container">
+                <div class="challenge-info">
+                    <h3>This Month's Theme: "Dogs in Nature"</h3>
+                    <p>Share your best shots of dogs enjoying the great outdoors!</p>
+                    <button class="submit-photo">Submit Your Photo</button>
+                </div>
+                <div class="challenge-examples">
+                    <img data-image-type="lifestyle" alt="Example: Dog hiking">
+                    <img data-image-type="lifestyle" alt="Example: Dog swimming">
+                    <img data-image-type="lifestyle" alt="Example: Dog in flowers">
+                </div>
+            </div>
+        </section>
+
+        <section class="photo-grid">
+            <!-- Photos will be dynamically loaded here -->
+        </section>
+
+        <div class="photo-modal" id="photo-modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="modal-image-container">
+                    <button class="nav-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <img src="" alt="" class="modal-image">
+                    <button class="nav-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="photo-info">
+                    <div class="photo-details">
+                        <h3 class="photo-title"></h3>
+                        <p class="photo-description"></p>
+                        <p class="photo-metadata">
+                            <span class="photographer"></span>
+                            <span class="upload-date"></span>
+                        </p>
+                    </div>
+                    <div class="photo-stats">
+                        <button class="like-btn">
+                            <i class="far fa-heart"></i>
+                            <span class="likes-count">0</span>
+                        </button>
+                        <button class="share-btn">
+                            <i class="fas fa-share"></i>
+                            Share
+                        </button>
+                        <button class="download-btn">
+                            <i class="fas fa-download"></i>
+                            Download
+                        </button>
+                    </div>
+                    <div class="photo-tags"></div>
+                    <div class="comments-section">
+                        <h4>Comments</h4>
+                        <div class="comments-list"></div>
+                        <form class="comment-form">
+                            <textarea placeholder="Add a comment..."></textarea>
+                            <button type="submit">Post</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="upload-modal" id="upload-modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Upload Your Photo</h2>
+                <form id="upload-form">
+                    <div class="upload-area">
+                        <input type="file" id="photo-input" accept="image/*" hidden>
+                        <div class="upload-placeholder">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Drag and drop your photo here or click to browse</p>
+                        </div>
+                        <img id="photo-preview" alt="Preview">
+                    </div>
+                    <div class="photo-details-form">
+                        <input type="text" name="title" placeholder="Photo Title" required>
+                        <textarea name="description" placeholder="Description"></textarea>
+                        <select name="category" required>
+                            <option value="">Select Category</option>
+                            <option value="portraits">Portraits</option>
+                            <option value="action">Action Shots</option>
+                            <option value="funny">Funny Moments</option>
+                            <option value="sleeping">Sleeping Beauties</option>
+                            <option value="puppies">Puppies</option>
+                        </select>
+                        <select name="breed" required>
+                            <option value="">Select Breed</option>
+                            <!-- Populated by JavaScript -->
+                        </select>
+                        <input type="text" name="tags" placeholder="Tags (comma separated)">
+                        <label class="consent-checkbox">
+                            <input type="checkbox" required>
+                            I own this photo and consent to sharing it
+                        </label>
+                        <button type="submit" class="submit-upload">Upload Photo</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <section class="featured-photographers">
+            <h2>Featured Photographers</h2>
+            <div class="photographer-grid">
+                <!-- Photographer cards will be dynamically loaded -->
+            </div>
+        </section>
+
+        <section class="photo-challenges">
+            <h2>Monthly Photo Challenge</h2>
+            <div class="challenge-container">
+                <div class="current-challenge">
+                    <h3>This Month's Theme: <span id="challenge-theme">Summer Fun</span></h3>
+                    <p class="challenge-description">Show us how your furry friend enjoys the summer weather!</p>
+                    <div class="challenge-stats">
+                        <div class="stat">
+                            <span class="stat-number">124</span>
+                            <span class="stat-label">Entries</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">15</span>
+                            <span class="stat-label">Days Left</span>
+                        </div>
+                    </div>
+                    <button class="participate-btn">Participate Now</button>
+                </div>
+                <div class="challenge-entries">
+                    <!-- Challenge entries will be dynamically loaded -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Barker's Canine Corner is your trusted source for all things dogs in the UK.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Use</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Barker's Canine Corner. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>

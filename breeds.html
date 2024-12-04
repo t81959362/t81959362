@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive guide to dog breeds in the UK. Learn about different breeds' characteristics, temperament, care requirements, and suitability for your lifestyle.">
+    <title>Dog Breeds Guide | Barker's Canine Corner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="js/image-loader.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.svg" alt="Barker's Canine Corner - Two dogs sitting on a couch against a countryside backdrop">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="guides.html">Guides</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="breeds.html" class="active">Breeds</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="locations.html">UK Locations</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="breeds-page">
+        <section class="page-hero">
+            <div class="hero-content">
+                <h1>Dog Breed Guide</h1>
+                <p>Find the perfect breed for your lifestyle</p>
+            </div>
+        </section>
+
+        <section class="breed-finder">
+            <div class="finder-container">
+                <h2>Breed Finder</h2>
+                <div class="finder-form">
+                    <div class="filter-group">
+                        <label>Size</label>
+                        <select id="size-filter">
+                            <option value="">All Sizes</option>
+                            <option value="small">Small (0-20 lbs)</option>
+                            <option value="medium">Medium (21-50 lbs)</option>
+                            <option value="large">Large (51-90 lbs)</option>
+                            <option value="giant">Giant (91+ lbs)</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Activity Level</label>
+                        <select id="activity-filter">
+                            <option value="">All Activity Levels</option>
+                            <option value="low">Low</option>
+                            <option value="moderate">Moderate</option>
+                            <option value="high">High</option>
+                            <option value="very-high">Very High</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Living Space</label>
+                        <select id="space-filter">
+                            <option value="">All Spaces</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="house">House</option>
+                            <option value="rural">Rural/Farm</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Experience Level</label>
+                        <select id="experience-filter">
+                            <option value="">All Experience Levels</option>
+                            <option value="beginner">First-time Owner</option>
+                            <option value="intermediate">Some Experience</option>
+                            <option value="experienced">Experienced Owner</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="breed-categories">
+            <div class="category-container">
+                <div class="breed-filters">
+                    <button class="filter-btn active" data-filter="all">All Breeds</button>
+                    <button class="filter-btn" data-filter="small">Small Breeds</button>
+                    <button class="filter-btn" data-filter="medium">Medium Breeds</button>
+                    <button class="filter-btn" data-filter="large">Large Breeds</button>
+                    <button class="filter-btn" data-filter="working">Working Dogs</button>
+                    <button class="filter-btn" data-filter="family">Family Dogs</button>
+                </div>
+
+                <div class="breed-grid">
+                    <!-- Small Breeds -->
+                    <article class="breed-card" data-category="small family">
+                        <div class="breed-image">
+                            <img data-image-type="breed" data-breed="cavalier" alt="Cavalier King Charles Spaniel">
+                        </div>
+                        <div class="breed-info">
+                            <h3>Cavalier King Charles Spaniel</h3>
+                            <div class="breed-stats">
+                                <span><i class="fas fa-weight-scale"></i> 5-8 kg</span>
+                                <span><i class="fas fa-ruler-vertical"></i> 30-33 cm</span>
+                                <span><i class="fas fa-heart"></i> 12-14 years</span>
+                            </div>
+                            <div class="breed-characteristics">
+                                <div class="characteristic">
+                                    <span>Exercise Needs</span>
+                                    <div class="rating-bar">
+                                        <div class="rating" style="width: 60%"></div>
+                                    </div>
+                                </div>
+                                <div class="characteristic">
+                                    <span>Grooming</span>
+                                    <div class="rating-bar">
+                                        <div class="rating" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                                <div class="characteristic">
+                                    <span>Family Friendly</span>
+                                    <div class="rating-bar">
+                                        <div class="rating" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="read-more">Learn More</a>
+                        </div>
+                    </article>
+
+                    <!-- Medium Breeds -->
+                    <article class="breed-card" data-category="medium family">
+                        <div class="breed-image">
+                            <img data-image-type="breed" data-breed="cocker spaniel" alt="English Cocker Spaniel">
+                        </div>
+                        <div class="breed-info">
+                            <h3>English Cocker Spaniel</h3>
+                            <div class="breed-stats">
+                                <span><i class="fas fa-weight-scale"></i> 13-14.5 kg</span>
+                                <span><i class="fas fa-ruler-vertical"></i> 38-41 cm</span>
+                                <span><i class="fas fa-heart"></i> 12-14 years</span>
+                            </div>
+                            <div class="breed-characteristics">
+                                <div class="characteristic">
+                                    <span>Exercise Needs</span>
+                                    <div class="rating-bar">
+                                        <div class="rating" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                                <div class="characteristic">
+                                    <span>Grooming</span>
+                                    <div class="rating-bar">
+                                        <div class="rating" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                                <div class="characteristic">
+                                    <span>Family Friendly</span>
+                                    <div class="rating-bar">
+                                        <div class="rating" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="read-more">Learn More</a>
+                        </div>
+                    </article>
+
+                    <!-- Large Breeds -->
+                    <article class="breed-card" data-category="large working">
+                        <div class="breed-image">
+                            <img data-image-type="breed" data-breed="german shepherd" alt="German Shepherd">
+                        </div>
+                        <div class="breed-info">
+                            <h3>German Shepherd</h3>
+                            <div class="breed-stats">
+                                <span><i class="fas fa-weight-scale"></i> 30-40 kg</span>
+                                <span><i class="fas fa-ruler-vertical"></i> 55-65 cm</span>
+                                <span><i class="fas fa-heart"></i> 9-13 years</span>
+                            </div>
+                            <div class="breed-characteristics">
+                                <div class="characteristic">
+                                    <span>Exercise Needs</span>
+                                    <div class="rating-bar">
+                                        <div class="rating" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div class="characteristic">
+                                    <span>Grooming</span>
+                                    <div class="rating-bar">
+                                        <div class="rating" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                                <div class="characteristic">
+                                    <span>Family Friendly</span>
+                                    <div class="rating-bar">
+                                        <div class="rating" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="read-more">Learn More</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="breed-comparison">
+            <div class="comparison-container">
+                <h2>Compare Breeds</h2>
+                <div class="comparison-tool">
+                    <div class="breed-select">
+                        <select id="breed1">
+                            <option value="">Select First Breed</option>
+                            <!-- Options will be populated by JavaScript -->
+                        </select>
+                        <select id="breed2">
+                            <option value="">Select Second Breed</option>
+                            <!-- Options will be populated by JavaScript -->
+                        </select>
+                        <button id="compare-btn" class="compare-button">Compare Breeds</button>
+                    </div>
+                    <div id="comparison-results" class="comparison-results">
+                        <!-- Results will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="breed-resources">
+            <h2>Helpful Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Breed Selection Guide</h3>
+                    <p>A comprehensive guide to choosing the right breed</p>
+                    <a href="#" class="download-btn">Download PDF</a>
+                </div>
+                <div class="resource-card">
+                    <i class="fas fa-calculator"></i>
+                    <h3>Cost Calculator</h3>
+                    <p>Calculate the lifetime cost of different breeds</p>
+                    <a href="#" class="tool-btn">Use Calculator</a>
+                </div>
+                <div class="resource-card">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h3>Breed Checklist</h3>
+                    <p>Essential questions to ask before choosing a breed</p>
+                    <a href="#" class="download-btn">Download PDF</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Barker's Canine Corner is your trusted source for all things dogs in the UK.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Use</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Barker's Canine Corner. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="breeds.js"></script>
+</body>
+</html>

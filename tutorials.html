@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Step-by-step dog training tutorials and guides. Learn essential skills from basic obedience to advanced training techniques.">
+    <title>Dog Training Tutorials | Barker's Canine Corner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="js/image-loader.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            imageLoader.loadPageImages();
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img data-image-type="logo" alt="Barker's Canine Corner - Two dogs sitting on a couch against a countryside backdrop">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="guides.html">Guides</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="breeds.html">Breeds</a></li>
+                <li><a href="tutorials.html" class="active">Tutorials</a></li>
+                <li><a href="locations.html">UK Locations</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tutorials-page">
+        <section class="page-hero">
+            <div class="hero-content">
+                <h1>Dog Training Tutorials</h1>
+                <p>Master essential training skills with our step-by-step guides</p>
+            </div>
+        </section>
+
+        <section class="skill-level-filter">
+            <div class="filter-container">
+                <h2>Choose Your Skill Level</h2>
+                <div class="level-buttons">
+                    <button class="level-btn active" data-level="beginner">
+                        <i class="fas fa-paw"></i>
+                        <span>Beginner</span>
+                    </button>
+                    <button class="level-btn" data-level="intermediate">
+                        <i class="fas fa-paw"></i>
+                        <i class="fas fa-paw"></i>
+                        <span>Intermediate</span>
+                    </button>
+                    <button class="level-btn" data-level="advanced">
+                        <i class="fas fa-paw"></i>
+                        <i class="fas fa-paw"></i>
+                        <i class="fas fa-paw"></i>
+                        <span>Advanced</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="tutorial-categories">
+            <div class="category-container">
+                <!-- Basic Obedience -->
+                <article class="tutorial-category" data-level="beginner">
+                    <div class="category-header">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h2>Basic Obedience</h2>
+                    </div>
+                    <div class="tutorial-grid">
+                        <div class="tutorial-card">
+                            <div class="tutorial-video">
+                                <img data-image-type="tutorial" alt="Teaching sit command">
+                                <span class="duration">5:30</span>
+                                <button class="play-btn"><i class="fas fa-play"></i></button>
+                            </div>
+                            <div class="tutorial-info">
+                                <h3>Teaching the 'Sit' Command</h3>
+                                <p>Master the fundamental 'sit' command with positive reinforcement techniques.</p>
+                                <div class="tutorial-meta">
+                                    <span><i class="fas fa-chart-bar"></i> Beginner</span>
+                                    <span><i class="fas fa-clock"></i> 5 min</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- More tutorial cards -->
+                    </div>
+                </article>
+
+                <!-- House Training -->
+                <article class="tutorial-category" data-level="beginner">
+                    <div class="category-header">
+                        <i class="fas fa-home"></i>
+                        <h2>House Training</h2>
+                    </div>
+                    <div class="tutorial-grid">
+                        <div class="tutorial-card">
+                            <div class="tutorial-video">
+                                <img data-image-type="tutorial" alt="Potty training basics">
+                                <span class="duration">8:15</span>
+                                <button class="play-btn"><i class="fas fa-play"></i></button>
+                            </div>
+                            <div class="tutorial-info">
+                                <h3>Potty Training Basics</h3>
+                                <p>Essential tips and techniques for successful house training.</p>
+                                <div class="tutorial-meta">
+                                    <span><i class="fas fa-chart-bar"></i> Beginner</span>
+                                    <span><i class="fas fa-clock"></i> 8 min</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- More tutorial cards -->
+                    </div>
+                </article>
+
+                <!-- Advanced Training -->
+                <article class="tutorial-category" data-level="advanced">
+                    <div class="category-header">
+                        <i class="fas fa-trophy"></i>
+                        <h2>Advanced Training</h2>
+                    </div>
+                    <div class="tutorial-grid">
+                        <div class="tutorial-card">
+                            <div class="tutorial-video">
+                                <img data-image-type="tutorial" alt="Agility training">
+                                <span class="duration">12:45</span>
+                                <button class="play-btn"><i class="fas fa-play"></i></button>
+                            </div>
+                            <div class="tutorial-info">
+                                <h3>Introduction to Agility Training</h3>
+                                <p>Learn the basics of agility training and course navigation.</p>
+                                <div class="tutorial-meta">
+                                    <span><i class="fas fa-chart-bar"></i> Advanced</span>
+                                    <span><i class="fas fa-clock"></i> 12 min</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- More tutorial cards -->
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="training-tools">
+            <div class="tools-container">
+                <h2>Essential Training Tools</h2>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <img data-image-type="tool" alt="Training clicker">
+                        <div class="tool-info">
+                            <h3>Training Clicker</h3>
+                            <p>Essential tool for marker training</p>
+                            <div class="tool-price">£5.99</div>
+                            <a href="#" class="buy-btn">Shop Now</a>
+                        </div>
+                    </div>
+                    <!-- More tool cards -->
+                </div>
+            </div>
+        </section>
+
+        <section class="training-resources">
+            <h2>Free Training Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>Training Schedule Template</h3>
+                    <p>Weekly training plan template</p>
+                    <a href="#" class="download-btn">Download PDF</a>
+                </div>
+                <div class="resource-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Training Journal</h3>
+                    <p>Track your dog's progress</p>
+                    <a href="#" class="download-btn">Download PDF</a>
+                </div>
+                <div class="resource-card">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h3>Command Checklist</h3>
+                    <p>Basic to advanced commands</p>
+                    <a href="#" class="download-btn">Download PDF</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="progress-tracker">
+            <div class="tracker-container">
+                <h2>Track Your Progress</h2>
+                <p>Sign up to track your training progress and get personalized recommendations</p>
+                <button class="signup-btn">Create Free Account</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Barker's Canine Corner is your trusted source for all things dogs in the UK.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Use</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Barker's Canine Corner. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="tutorials.js"></script>
+</body>
+</html>

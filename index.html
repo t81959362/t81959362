@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Barker's Canine Corner - Your ultimate guide to all things dogs in the UK. Expert advice, product reviews, and dog-friendly locations.">
+    <title>Barker's Canine Corner - Your UK Dog Resource</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="js/image-loader.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            imageLoader.loadPageImages();
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.svg" alt="Barker's Canine Corner - Two dogs sitting on a couch against a countryside backdrop">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="guides.html">Guides</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="breeds.html">Breeds</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="locations.html">UK Locations</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" data-image-type="hero">
+            <div class="hero-content">
+                <h1>Welcome to Barker's Canine Corner</h1>
+                <p>Your trusted guide to all things dogs in the UK</p>
+                <div class="cta-buttons">
+                    <a href="#featured" class="cta-primary">Explore Articles</a>
+                    <a href="#newsletter" class="cta-secondary">Join Newsletter</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured" class="featured-posts">
+            <h2>Featured Articles</h2>
+            <div class="post-grid">
+                <!-- Featured posts will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <section class="featured-content">
+            <div class="featured-grid">
+                <article class="featured-card">
+                    <img data-image-type="lifestyle" alt="Happy dog playing in the park">
+                    <h3>Essential Dog Care Tips</h3>
+                    <p>Discover the best practices for keeping your furry friend healthy and happy.</p>
+                </article>
+                <article class="featured-card">
+                    <img data-image-type="breed" data-breed="golden retriever" alt="Golden Retriever">
+                    <h3>Popular UK Dog Breeds</h3>
+                    <p>Learn about the most beloved dog breeds in the United Kingdom.</p>
+                </article>
+                <article class="featured-card">
+                    <img data-image-type="training" alt="Dog training session">
+                    <h3>Training Guides</h3>
+                    <p>Expert advice on training your dog with positive reinforcement.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="categories">
+            <h2>Popular Categories</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <i class="fas fa-bone"></i>
+                    <h3>New Dog Owner Guide</h3>
+                    <p>Essential tips for first-time dog parents</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Health & Wellness</h3>
+                    <p>Keep your furry friend healthy and happy</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Dog-Friendly Locations</h3>
+                    <p>Discover perfect spots for adventures</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h3>Product Reviews</h3>
+                    <p>Honest reviews of dog essentials</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-author">
+            <div class="author-container">
+                <div class="author-image">
+                    <img src="images/author/penelope-daisy.png" alt="Penelope with her dog Daisy" class="author-photo">
+                </div>
+                <div class="author-content">
+                    <h2>Meet Penelope Barker</h2>
+                    <p>Penelope Barker is a 40-year-old dog enthusiast living in the tranquil British countryside. With a deep love for animals, she shares her home with her loyal rescue dog, Daisy, who accompanies her on outdoor adventures and inspires her writing.</p>
+                    <p>Growing up in a family that valued nature and companionship, Penelope developed a passion for dogs early in life. She pursued her interest academically, studying animal behavior and training, which has equipped her with the knowledge to help others understand their furry friends better.</p>
+                    <p>In her free time, Penelope enjoys exploring dog-friendly trails and parks across the UK, capturing beautiful moments with Daisy to share on her blog. Through her work, she aims to inspire others to appreciate the bond between humans and dogs while promoting the importance of adopting pets in need.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="newsletter" class="newsletter">
+            <div class="newsletter-content">
+                <h2>Join Our Pack!</h2>
+                <p>Subscribe to receive weekly tips, guides, and exclusive content</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="image-gallery">
+            <h2>Featured Photos</h2>
+            <div class="gallery-grid">
+                <!-- Gallery images will be dynamically loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Barker's Canine Corner is your trusted source for all things dogs in the UK.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Use</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Barker's Canine Corner. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
